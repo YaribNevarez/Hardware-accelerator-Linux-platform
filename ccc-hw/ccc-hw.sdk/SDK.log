@@ -1,0 +1,19 @@
+23:28:59 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+23:29:04 INFO  : XSDB server has started successfully.
+23:29:04 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+23:33:08 INFO  : Refreshed build settings on project FSBL
+23:35:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:35:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+23:35:45 INFO  : FPGA configured successfully with bitstream "/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+23:36:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:36:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+23:36:33 INFO  : FPGA configured successfully with bitstream "/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+23:37:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:37:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+23:37:08 INFO  : FPGA configured successfully with bitstream "/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+23:42:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:45:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:45:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+23:45:51 INFO  : FPGA configured successfully with bitstream "/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+23:45:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:22:01 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
