@@ -2,6 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="XUARTPS_DFT_BAUDRATE"/>
+			<item value="XUartPs_SetBaudRate"/>
+			<item value="XUARTPS_BAUDGEN_OFFSET"/>
+			<item value="XTC_CSR_ENABLE_PWM_MASK"/>
+			<item value="XPAR_GPIO_1_BASEADDR"/>
+			<item value="XPAR_AXI_TIMER_1_BASEADDR"/>
+		</list>
+	</section>
 	<section name="completion_proposal_size">
 	</section>
 </section>

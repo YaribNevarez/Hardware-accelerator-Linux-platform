@@ -69,6 +69,14 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc]
   read_xdc -ref ccc_design_axi_gpio_0_1 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc
   set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc]
+  read_xdc -ref ccc_design_axi_timer_0_0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc]
+  read_xdc -ref ccc_design_axi_timer_1_0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc]
+  read_xdc -prop_thru_buffers -ref ccc_design_axi_gpio_0_0 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc
+  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc]
+  read_xdc -ref ccc_design_axi_gpio_0_0 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc]
   read_xdc /home/yarib/ZYBO_projects/Hardware/ZYBO-master/Resources/XDC/ZYBO_Master.xdc
   link_design -top ccc_design_wrapper -part xc7z010clg400-1
   close_msg_db -file init_design.pb

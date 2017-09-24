@@ -8,6 +8,6 @@ cp ./ccc-hw.sdk/FSBL/Debug/FSBL.elf .
 
 echo $? "FSBL copied..."
 
-bootgen -w -image ccc-zybo.bif -o i BOOT.bin
+bootgen -w -image firmware.bif -o i BOOT.bin
 
 echo $? "BOOT.bin generated !"

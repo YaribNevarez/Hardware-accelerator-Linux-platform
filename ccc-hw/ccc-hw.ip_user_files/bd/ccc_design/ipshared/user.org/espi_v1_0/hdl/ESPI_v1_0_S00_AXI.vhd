@@ -144,7 +144,7 @@ architecture arch_imp of ESPI_v1_0_S00_AXI is
 CONSTANT  ESPI_DATA_LENGTH_BIT_SIZE   : INTEGER := 2;
 CONSTANT  ESPI_BAUD_RATE_DIVIDER_SIZE : INTEGER := 8;
 CONSTANT  ESPI_SLAVE_SELECT_SIZE      : INTEGER := 2;
-CONSTANT  ESPI_SETTLE_TIME_SIZE       : INTEGER := 4;
+CONSTANT  ESPI_SETTLE_TIME_SIZE       : INTEGER := 2;
 
 
 SIGNAL    espi_data_length        : STD_LOGIC_VECTOR (ESPI_DATA_LENGTH_BIT_SIZE-1 DOWNTO 0);
@@ -154,13 +154,13 @@ SIGNAL    espi_clock_polarity     : STD_LOGIC;
 SIGNAL    espi_clock_phase        : STD_LOGIC;
 SIGNAL    espi_start_transmission : STD_LOGIC;
 SIGNAL    espi_transmission_done  : STD_LOGIC;
+SIGNAL    espi_cs_force           : STD_LOGIC;
 
 SIGNAL    espi_slave_select       : STD_LOGIC_VECTOR (ESPI_SLAVE_SELECT_SIZE-1 DOWNTO 0);
 SIGNAL    espi_data_rx            : STD_LOGIC_VECTOR (C_S_AXI_DATA_WIDTH-1 DOWNTO 0);
-SIGNAL    espi_cs                 : STD_LOGIC;
 
-SIGNAL    espi_reset_high                 : STD_LOGIC;
-SIGNAL    espi_cs_internal                : STD_LOGIC;
+SIGNAL    espi_reset_high         : STD_LOGIC;
+SIGNAL    espi_cs_internal        : STD_LOGIC;
 
 begin
 	-- I/O Connections assignments
@@ -395,9 +395,12 @@ begin
 	    loc_addr := axi_araddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	    case loc_addr is
 	      when b"00" =>
-	        reg_data_out <= slv_reg0;
+	        reg_data_out <= x"00"
+	                       & "000000" & espi_slave_select
+	                       & espi_transmission_done & espi_settle_time & espi_cs_force & espi_data_length & espi_clock_polarity & espi_clock_phase
+	                       & espi_baud_rate_divider;
 	      when b"01" =>
-	        reg_data_out <= slv_reg1;
+	        reg_data_out <= espi_data_rx;
 	      when b"10" =>
 	        reg_data_out <= slv_reg2;
 	      when b"11" =>
@@ -428,6 +431,21 @@ begin
 
 	-- Add user logic here
 	espi_reset_high <= NOT S_AXI_ARESETN;
+
+	WITH espi_slave_select SELECT
+	ucs <= "11" & (espi_cs_internal AND (NOT espi_cs_force))        WHEN "00",
+	        '1' & (espi_cs_internal AND (NOT espi_cs_force)) & '1'  WHEN "01",
+	              (espi_cs_internal AND (NOT espi_cs_force)) & "11" WHEN "10",
+	                                                          "111" WHEN "11";
+
+    
+	espi_slave_select      <= slv_reg0(17 DOWNTO 16);
+	espi_settle_time       <= slv_reg0(14 DOWNTO 13);
+	espi_cs_force          <= slv_reg0(12);
+	espi_data_length       <= slv_reg0(11 DOWNTO 10);
+	espi_clock_polarity    <= slv_reg0(9);
+	espi_clock_phase       <= slv_reg0(8);
+	espi_baud_rate_divider <= slv_reg0(7 DOWNTO 0);
 
     espi_instance : espi
     GENERIC MAP (DATA_LENGTH_BIT_SIZE   => ESPI_DATA_LENGTH_BIT_SIZE,

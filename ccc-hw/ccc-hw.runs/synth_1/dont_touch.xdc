@@ -24,6 +24,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_axi_
 # IP: bd/ccc_design/ip/ccc_design_ESPI_0_0/ccc_design_ESPI_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_ESPI_0_0 || ORIG_REF_NAME==ccc_design_ESPI_0_0}]
 
+# IP: bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_axi_timer_0_0 || ORIG_REF_NAME==ccc_design_axi_timer_0_0}]
+
+# IP: bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_axi_timer_1_0 || ORIG_REF_NAME==ccc_design_axi_timer_1_0}]
+
+# IP: bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_axi_gpio_0_0 || ORIG_REF_NAME==ccc_design_axi_gpio_0_0}]
+
 # IP: bd/ccc_design/ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_auto_pc_0 || ORIG_REF_NAME==ccc_design_auto_pc_0}]
 
@@ -47,6 +56,24 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==ccc_design_axi_gpio_0_1 || ORIG_REF_NAME==ccc_design_axi_gpio_0_1}] {/U0 }]/U0 ]]
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_axi_timer_0_0 || ORIG_REF_NAME==ccc_design_axi_timer_0_0}]
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0_ooc.xdc
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ccc_design_axi_timer_1_0 || ORIG_REF_NAME==ccc_design_axi_timer_1_0}]
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0_ooc.xdc
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==ccc_design_axi_gpio_0_0 || ORIG_REF_NAME==ccc_design_axi_gpio_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_ooc.xdc
+
+# XDC: bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==ccc_design_axi_gpio_0_0 || ORIG_REF_NAME==ccc_design_axi_gpio_0_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/ccc_design/ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0_ooc.xdc
 

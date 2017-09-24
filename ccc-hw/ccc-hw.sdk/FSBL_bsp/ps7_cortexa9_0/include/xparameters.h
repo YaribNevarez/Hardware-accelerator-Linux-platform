@@ -203,72 +203,47 @@
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
 
 
+/* Definitions for peripheral ESPI_0 */
+#define XPAR_ESPI_0_0 0x43C00000
+#define XPAR_ESPI_0_0 0x43C00000
+
+
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 4
-
-/* Definitions for peripheral BTN */
-#define XPAR_BTN_BASEADDR 0x41200000
-#define XPAR_BTN_HIGHADDR 0x4120FFFF
-#define XPAR_BTN_DEVICE_ID 0
-#define XPAR_BTN_INTERRUPT_PRESENT 0
-#define XPAR_BTN_IS_DUAL 0
-
-
-/* Definitions for peripheral LED */
-#define XPAR_LED_BASEADDR 0x41210000
-#define XPAR_LED_HIGHADDR 0x4121FFFF
-#define XPAR_LED_DEVICE_ID 1
-#define XPAR_LED_INTERRUPT_PRESENT 0
-#define XPAR_LED_IS_DUAL 0
-
+#define XPAR_XGPIO_NUM_INSTANCES 2
 
 /* Definitions for peripheral PMOD */
-#define XPAR_PMOD_BASEADDR 0x41230000
-#define XPAR_PMOD_HIGHADDR 0x4123FFFF
-#define XPAR_PMOD_DEVICE_ID 2
+#define XPAR_PMOD_BASEADDR 0x41200000
+#define XPAR_PMOD_HIGHADDR 0x4120FFFF
+#define XPAR_PMOD_DEVICE_ID 0
 #define XPAR_PMOD_INTERRUPT_PRESENT 0
 #define XPAR_PMOD_IS_DUAL 0
 
 
-/* Definitions for peripheral SW */
-#define XPAR_SW_BASEADDR 0x41220000
-#define XPAR_SW_HIGHADDR 0x4122FFFF
-#define XPAR_SW_DEVICE_ID 3
-#define XPAR_SW_INTERRUPT_PRESENT 0
-#define XPAR_SW_IS_DUAL 0
+/* Definitions for peripheral ZYBO */
+#define XPAR_ZYBO_BASEADDR 0x41210000
+#define XPAR_ZYBO_HIGHADDR 0x4121FFFF
+#define XPAR_ZYBO_DEVICE_ID 1
+#define XPAR_ZYBO_INTERRUPT_PRESENT 0
+#define XPAR_ZYBO_IS_DUAL 1
 
 
 /******************************************************************/
 
-/* Canonical definitions for peripheral BTN */
+/* Canonical definitions for peripheral PMOD */
 #define XPAR_GPIO_0_BASEADDR 0x41200000
 #define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_BTN_DEVICE_ID
+#define XPAR_GPIO_0_DEVICE_ID XPAR_PMOD_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_0_IS_DUAL 0
 
-/* Canonical definitions for peripheral LED */
+/* Canonical definitions for peripheral ZYBO */
 #define XPAR_GPIO_1_BASEADDR 0x41210000
 #define XPAR_GPIO_1_HIGHADDR 0x4121FFFF
-#define XPAR_GPIO_1_DEVICE_ID XPAR_LED_DEVICE_ID
+#define XPAR_GPIO_1_DEVICE_ID XPAR_ZYBO_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_1_IS_DUAL 0
-
-/* Canonical definitions for peripheral PMOD */
-#define XPAR_GPIO_2_BASEADDR 0x41230000
-#define XPAR_GPIO_2_HIGHADDR 0x4123FFFF
-#define XPAR_GPIO_2_DEVICE_ID XPAR_PMOD_DEVICE_ID
-#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_2_IS_DUAL 0
-
-/* Canonical definitions for peripheral SW */
-#define XPAR_GPIO_3_BASEADDR 0x41220000
-#define XPAR_GPIO_3_HIGHADDR 0x4122FFFF
-#define XPAR_GPIO_3_DEVICE_ID XPAR_SW_DEVICE_ID
-#define XPAR_GPIO_3_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_3_IS_DUAL 0
+#define XPAR_GPIO_1_IS_DUAL 1
 
 
 /******************************************************************/
@@ -396,6 +371,38 @@
 #define XPAR_XSDPS_0_HAS_CD 1
 #define XPAR_XSDPS_0_HAS_WP 1
 
+
+/******************************************************************/
+
+/* Definitions for driver TMRCTR */
+#define XPAR_XTMRCTR_NUM_INSTANCES 2
+
+/* Definitions for peripheral AXI_TIMER_0 */
+#define XPAR_AXI_TIMER_0_DEVICE_ID 0
+#define XPAR_AXI_TIMER_0_BASEADDR 0x42800000
+#define XPAR_AXI_TIMER_0_HIGHADDR 0x4280FFFF
+#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 100000000
+
+
+/* Definitions for peripheral AXI_TIMER_1 */
+#define XPAR_AXI_TIMER_1_DEVICE_ID 1
+#define XPAR_AXI_TIMER_1_BASEADDR 0x42810000
+#define XPAR_AXI_TIMER_1_HIGHADDR 0x4281FFFF
+#define XPAR_AXI_TIMER_1_CLOCK_FREQ_HZ 100000000
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_TIMER_0 */
+#define XPAR_TMRCTR_0_DEVICE_ID 0
+#define XPAR_TMRCTR_0_BASEADDR 0x42800000
+#define XPAR_TMRCTR_0_HIGHADDR 0x4280FFFF
+#define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ
+/* Canonical definitions for peripheral AXI_TIMER_1 */
+#define XPAR_TMRCTR_1_DEVICE_ID 0
+#define XPAR_TMRCTR_1_BASEADDR 0x42810000
+#define XPAR_TMRCTR_1_HIGHADDR 0x4281FFFF
+#define XPAR_TMRCTR_1_CLOCK_FREQ_HZ XPAR_AXI_TIMER_1_CLOCK_FREQ_HZ
 
 /******************************************************************/
 

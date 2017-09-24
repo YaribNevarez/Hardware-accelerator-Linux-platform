@@ -13,6 +13,8 @@ vlib msim/axi_crossbar_v2_1_8
 vlib msim/axi_lite_ipif_v3_0_3
 vlib msim/interrupt_control_v3_1_3
 vlib msim/axi_gpio_v2_0_9
+vlib msim/lib_pkg_v1_0_2
+vlib msim/axi_timer_v2_0_8
 vlib msim/axi_protocol_converter_v2_1_7
 
 vmap xil_defaultlib msim/xil_defaultlib
@@ -27,6 +29,8 @@ vmap axi_crossbar_v2_1_8 msim/axi_crossbar_v2_1_8
 vmap axi_lite_ipif_v3_0_3 msim/axi_lite_ipif_v3_0_3
 vmap interrupt_control_v3_1_3 msim/interrupt_control_v3_1_3
 vmap axi_gpio_v2_0_9 msim/axi_gpio_v2_0_9
+vmap lib_pkg_v1_0_2 msim/lib_pkg_v1_0_2
+vmap axi_timer_v2_0_8 msim/axi_timer_v2_0_8
 vmap axi_protocol_converter_v2_1_7 msim/axi_protocol_converter_v2_1_7
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/processing_system7_bfm_v2_0/hdl" "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/processing_system7_bfm_v2_0/hdl" \
@@ -144,6 +148,23 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/ccc_design/ipshared/user.org/espi_v1_0/hdl/ESPI_v1_0_S00_AXI.vhd" \
 "../../../bd/ccc_design/ipshared/user.org/espi_v1_0/hdl/ESPI_v1_0.vhd" \
 "../../../bd/ccc_design/ip/ccc_design_ESPI_0_0/sim/ccc_design_ESPI_0_0.vhd" \
+
+vcom -work lib_pkg_v1_0_2 -64 -93 \
+"../../../ipstatic/lib_pkg_v1_0/hdl/src/vhdl/lib_pkg.vhd" \
+
+vcom -work axi_timer_v2_0_8 -64 -93 \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/counter_f.vhd" \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/mux_onehot_f.vhd" \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_types.vhd" \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/timer_control.vhd" \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/count_module.vhd" \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_core.vhd" \
+"../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/axi_timer.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/ccc_design/ip/ccc_design_axi_timer_0_0/sim/ccc_design_axi_timer_0_0.vhd" \
+"../../../bd/ccc_design/ip/ccc_design_axi_timer_1_0/sim/ccc_design_axi_timer_1_0.vhd" \
+"../../../bd/ccc_design/ip/ccc_design_axi_gpio_0_0/sim/ccc_design_axi_gpio_0_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_7 -64 -incr "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/processing_system7_bfm_v2_0/hdl" "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/processing_system7_bfm_v2_0/hdl" \
 "../../../ipstatic/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_a_axi3_conv.v" \

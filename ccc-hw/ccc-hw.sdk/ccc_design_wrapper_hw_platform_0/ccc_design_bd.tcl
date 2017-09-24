@@ -146,35 +146,33 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
-  set btn [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btn ]
-  set led [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 led ]
+  set btnsw [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btnsw ]
+  set leds [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds ]
   set pmod [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 pmod ]
-  set sw [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sw ]
 
   # Create ports
+  set clk [ create_bd_port -dir O clk ]
+  set cs [ create_bd_port -dir O -from 2 -to 0 cs ]
+  set miso [ create_bd_port -dir I miso ]
+  set mosi [ create_bd_port -dir O mosi ]
+  set pwm0 [ create_bd_port -dir O pwm0 ]
+  set pwm1 [ create_bd_port -dir O pwm1 ]
 
-  # Create instance: btn, and set properties
-  set btn [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 btn ]
-  set_property -dict [ list \
-CONFIG.C_INTERRUPT_PRESENT {0} \
-CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} \
-CONFIG.USE_BOARD_FLOW {true} \
- ] $btn
+  # Create instance: ESPI_0, and set properties
+  set ESPI_0 [ create_bd_cell -type ip -vlnv user.org:user:ESPI:1.0 ESPI_0 ]
 
-  # Create instance: led, and set properties
-  set led [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 led ]
-  set_property -dict [ list \
-CONFIG.C_GPIO_WIDTH {4} \
-CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} \
-CONFIG.USE_BOARD_FLOW {true} \
- ] $led
+  # Create instance: axi_timer_0, and set properties
+  set axi_timer_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0 ]
+
+  # Create instance: axi_timer_1, and set properties
+  set axi_timer_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_1 ]
 
   # Create instance: pmod, and set properties
   set pmod [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 pmod ]
   set_property -dict [ list \
 CONFIG.C_ALL_INPUTS {0} \
 CONFIG.C_ALL_OUTPUTS {0} \
-CONFIG.C_GPIO_WIDTH {32} \
+CONFIG.C_GPIO_WIDTH {24} \
 CONFIG.C_IS_DUAL {0} \
 CONFIG.GPIO_BOARD_INTERFACE {Custom} \
 CONFIG.USE_BOARD_FLOW {true} \
@@ -306,7 +304,7 @@ CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0} \
 CONFIG.PCW_UART0_BAUD_RATE {9600} \
 CONFIG.PCW_UART0_GRP_FULL_ENABLE {0} \
 CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} \
-CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} \
+CONFIG.PCW_UART0_UART0_IO {MIO 10 .. 11} \
 CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \
 CONFIG.PCW_UIPARAM_DDR_BOARD_DELAY0 {0.176} \
 CONFIG.PCW_UIPARAM_DDR_BOARD_DELAY1 {0.159} \
@@ -329,80 +327,103 @@ CONFIG.PCW_USB0_RESET_IO {MIO 46} \
   # Create instance: processing_system7_0_axi_periph, and set properties
   set processing_system7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 processing_system7_0_axi_periph ]
   set_property -dict [ list \
-CONFIG.NUM_MI {4} \
+CONFIG.NUM_MI {5} \
  ] $processing_system7_0_axi_periph
 
   # Create instance: rst_processing_system7_0_100M, and set properties
   set rst_processing_system7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_processing_system7_0_100M ]
 
-  # Create instance: sw, and set properties
-  set sw [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 sw ]
+  # Create instance: zybo, and set properties
+  set zybo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 zybo ]
   set_property -dict [ list \
 CONFIG.C_ALL_INPUTS {1} \
-CONFIG.C_GPIO_WIDTH {4} \
-CONFIG.C_IS_DUAL {0} \
-CONFIG.GPIO_BOARD_INTERFACE {sws_4bits} \
+CONFIG.C_ALL_OUTPUTS_2 {1} \
+CONFIG.C_GPIO2_WIDTH {4} \
+CONFIG.C_GPIO_WIDTH {8} \
+CONFIG.C_INTERRUPT_PRESENT {0} \
+CONFIG.C_IS_DUAL {1} \
+CONFIG.GPIO2_BOARD_INTERFACE {Custom} \
+CONFIG.GPIO_BOARD_INTERFACE {Custom} \
 CONFIG.USE_BOARD_FLOW {true} \
- ] $sw
+ ] $zybo
 
   # Create interface connections
-  connect_bd_intf_net -intf_net btn [get_bd_intf_ports btn] [get_bd_intf_pins btn/GPIO]
-  connect_bd_intf_net -intf_net led [get_bd_intf_ports led] [get_bd_intf_pins led/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports btnsw] [get_bd_intf_pins zybo/GPIO]
   connect_bd_intf_net -intf_net pmod [get_bd_intf_ports pmod] [get_bd_intf_pins pmod/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins processing_system7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins btn/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
-  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M01_AXI [get_bd_intf_pins led/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M02_AXI [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI] [get_bd_intf_pins sw/S_AXI]
-  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M03_AXI [get_bd_intf_pins pmod/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net sw [get_bd_intf_ports sw] [get_bd_intf_pins sw/GPIO]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins ESPI_0/S00_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M01_AXI [get_bd_intf_pins pmod/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_timer_0/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_timer_1/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M04_AXI [get_bd_intf_pins processing_system7_0_axi_periph/M04_AXI] [get_bd_intf_pins zybo/S_AXI]
+  connect_bd_intf_net -intf_net zybo_GPIO2 [get_bd_intf_ports leds] [get_bd_intf_pins zybo/GPIO2]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins btn/s_axi_aclk] [get_bd_pins led/s_axi_aclk] [get_bd_pins pmod/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk] [get_bd_pins sw/s_axi_aclk]
+  connect_bd_net -net ESPI_0_clk [get_bd_ports clk] [get_bd_pins ESPI_0/clk]
+  connect_bd_net -net ESPI_0_cs [get_bd_ports cs] [get_bd_pins ESPI_0/cs]
+  connect_bd_net -net ESPI_0_mosi [get_bd_ports mosi] [get_bd_pins ESPI_0/mosi]
+  connect_bd_net -net axi_timer_0_pwm0 [get_bd_ports pwm0] [get_bd_pins axi_timer_0/pwm0]
+  connect_bd_net -net axi_timer_1_pwm0 [get_bd_ports pwm1] [get_bd_pins axi_timer_1/pwm0]
+  connect_bd_net -net miso_1 [get_bd_ports miso] [get_bd_pins ESPI_0/miso]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins ESPI_0/s00_axi_aclk] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_timer_1/s_axi_aclk] [get_bd_pins pmod/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/M04_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk] [get_bd_pins zybo/s_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins btn/s_axi_aresetn] [get_bd_pins led/s_axi_aresetn] [get_bd_pins pmod/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn] [get_bd_pins sw/s_axi_aresetn]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins ESPI_0/s00_axi_aresetn] [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins axi_timer_1/s_axi_aresetn] [get_bd_pins pmod/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M04_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn] [get_bd_pins zybo/s_axi_aresetn]
 
   # Create address segments
-  create_bd_addr_seg -range 0x10000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs btn/S_AXI/Reg] SEG_axi_gpio_0_Reg
-  create_bd_addr_seg -range 0x10000 -offset 0x41230000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs pmod/S_AXI/Reg] SEG_axi_gpio_0_Reg1
-  create_bd_addr_seg -range 0x10000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs led/S_AXI/Reg] SEG_axi_gpio_1_Reg
-  create_bd_addr_seg -range 0x10000 -offset 0x41220000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs sw/S_AXI/Reg] SEG_axi_gpio_2_Reg
+  create_bd_addr_seg -range 0x10000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs ESPI_0/S00_AXI/S00_AXI_reg] SEG_ESPI_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x10000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs zybo/S_AXI/Reg] SEG_axi_gpio_0_Reg
+  create_bd_addr_seg -range 0x10000 -offset 0x42800000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_timer_0/S_AXI/Reg] SEG_axi_timer_0_Reg
+  create_bd_addr_seg -range 0x10000 -offset 0x42810000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_timer_1/S_AXI/Reg] SEG_axi_timer_1_Reg
+  create_bd_addr_seg -range 0x10000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs pmod/S_AXI/Reg] SEG_pmod_Reg
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 400 -defaultsOSRD
-preplace port sw -pg 1 -y 490 -defaultsOSRD
-preplace port btn -pg 1 -y 70 -defaultsOSRD
-preplace port led -pg 1 -y 200 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 420 -defaultsOSRD
-preplace port pmod -pg 1 -y 330 -defaultsOSRD
-preplace inst sw -pg 1 -lvl 3 -y 490 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 250 -defaultsOSRD
-preplace inst btn -pg 1 -lvl 3 -y 70 -defaultsOSRD
-preplace inst led -pg 1 -lvl 3 -y 200 -defaultsOSRD
-preplace inst pmod -pg 1 -lvl 3 -y 330 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 210 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 460 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 400 NJ 400 NJ
-preplace netloc sw 1 3 1 NJ
-preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 1 750
+preplace port DDR -pg 1 -y 480 -defaultsOSRD
+preplace port miso -pg 1 -y 390 -defaultsOSRD
+preplace port btnsw -pg 1 -y 60 -defaultsOSRD
+preplace port mosi -pg 1 -y 420 -defaultsOSRD
+preplace port pwm0 -pg 1 -y 240 -defaultsOSRD
+preplace port pwm1 -pg 1 -y 780 -defaultsOSRD
+preplace port leds -pg 1 -y 80 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 500 -defaultsOSRD
+preplace port clk -pg 1 -y 400 -defaultsOSRD
+preplace port pmod -pg 1 -y 610 -defaultsOSRD
+preplace portBus cs -pg 1 -y 380 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 750 -defaultsOSRD
+preplace inst ESPI_0 -pg 1 -lvl 3 -y 400 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -y 230 -defaultsOSRD
+preplace inst axi_timer_1 -pg 1 -lvl 3 -y 770 -defaultsOSRD
+preplace inst pmod -pg 1 -lvl 3 -y 610 -defaultsOSRD
+preplace inst zybo -pg 1 -lvl 3 -y 70 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 700 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 540 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 480 NJ 480 NJ
+preplace netloc ESPI_0_mosi 1 3 1 NJ
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 1 N
 preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 750
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 420
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 350 410
-preplace netloc btn 1 3 1 NJ
-preplace netloc led 1 3 1 NJ
+preplace netloc miso_1 1 0 3 NJ 390 NJ 390 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N
+preplace netloc zybo_GPIO2 1 3 1 NJ
+preplace netloc axi_timer_0_pwm0 1 3 1 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 660 410
+preplace netloc ESPI_0_clk 1 3 1 NJ
 preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 1 760
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 2 450 390 780
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 420 NJ 420 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 2 420 460 780
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 500 NJ 500 NJ
+preplace netloc axi_gpio_0_GPIO 1 3 1 NJ
 preplace netloc pmod 1 3 1 NJ
+preplace netloc axi_timer_1_pwm0 1 3 1 NJ
+preplace netloc ESPI_0_cs 1 3 1 NJ
 preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 1 430
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 340 440 490 770
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 760
-levelinfo -pg 1 0 220 600 880 1000 -top 0 -bot 570
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 650 440 490 770
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 1 740
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 790
+levelinfo -pg 1 0 220 590 910 1050 -top 0 -bot 920
 ",
 }
 

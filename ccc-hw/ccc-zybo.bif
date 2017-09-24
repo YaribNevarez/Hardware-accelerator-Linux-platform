@@ -1,6 +1,0 @@
-the_ROM_image:
-{
-	[bootloader]FSBL.elf
-	ccc_design_wrapper.bit
-	u-boot.elf
-}

@@ -114,6 +114,23 @@
   "../../../bd/ccc_design/ipshared/user.org/espi_v1_0/hdl/ESPI_v1_0.vhd" \
   "../../../bd/ccc_design/ip/ccc_design_ESPI_0_0/sim/ccc_design_ESPI_0_0.vhd" \
 -endlib
+-makelib ies/lib_pkg_v1_0_2 \
+  "../../../ipstatic/lib_pkg_v1_0/hdl/src/vhdl/lib_pkg.vhd" \
+-endlib
+-makelib ies/axi_timer_v2_0_8 \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/counter_f.vhd" \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/mux_onehot_f.vhd" \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_types.vhd" \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/timer_control.vhd" \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/count_module.vhd" \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_core.vhd" \
+  "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/axi_timer.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/ccc_design/ip/ccc_design_axi_timer_0_0/sim/ccc_design_axi_timer_0_0.vhd" \
+  "../../../bd/ccc_design/ip/ccc_design_axi_timer_1_0/sim/ccc_design_axi_timer_1_0.vhd" \
+  "../../../bd/ccc_design/ip/ccc_design_axi_gpio_0_0/sim/ccc_design_axi_gpio_0_0.vhd" \
+-endlib
 -makelib ies/axi_protocol_converter_v2_1_7 \
   "../../../ipstatic/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_a_axi3_conv.v" \
   "../../../ipstatic/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi3_conv.v" \

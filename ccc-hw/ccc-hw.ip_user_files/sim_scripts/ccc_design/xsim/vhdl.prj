@@ -19,6 +19,17 @@ vhdl xil_defaultlib "../../../bd/ccc_design/ipshared/user.org/espi_v1_0/src/espi
 vhdl xil_defaultlib "../../../bd/ccc_design/ipshared/user.org/espi_v1_0/hdl/ESPI_v1_0_S00_AXI.vhd" 
 vhdl xil_defaultlib "../../../bd/ccc_design/ipshared/user.org/espi_v1_0/hdl/ESPI_v1_0.vhd" 
 vhdl xil_defaultlib "../../../bd/ccc_design/ip/ccc_design_ESPI_0_0/sim/ccc_design_ESPI_0_0.vhd" 
+vhdl lib_pkg_v1_0_2 "../../../ipstatic/lib_pkg_v1_0/hdl/src/vhdl/lib_pkg.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/counter_f.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/mux_onehot_f.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_types.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/timer_control.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/count_module.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/tc_core.vhd" 
+vhdl axi_timer_v2_0_8 "../../../ipstatic/axi_timer_v2_0/hdl/src/vhdl/axi_timer.vhd" 
+vhdl xil_defaultlib "../../../bd/ccc_design/ip/ccc_design_axi_timer_0_0/sim/ccc_design_axi_timer_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/ccc_design/ip/ccc_design_axi_timer_1_0/sim/ccc_design_axi_timer_1_0.vhd" 
+vhdl xil_defaultlib "../../../bd/ccc_design/ip/ccc_design_axi_gpio_0_0/sim/ccc_design_axi_gpio_0_0.vhd" 
 vhdl xil_defaultlib "../../../bd/ccc_design/hdl/ccc_design.vhd" 
 
 nosort

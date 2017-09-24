@@ -6,7 +6,7 @@
 <Project Version="7" Minor="10" Path="/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.tmp/ESPI_v1_0_project/ESPI_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="c12858f36f2f469caf1c54928c831db7"/>
+    <Option Name="Id" Val="129099777dd2443b87926faf12075937"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
@@ -15,7 +15,6 @@
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
-    <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val="digilentinc.com:zybo:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -68,7 +67,6 @@
         <Option Name="TopModule" Val="ESPI_v1_0"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
-        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>

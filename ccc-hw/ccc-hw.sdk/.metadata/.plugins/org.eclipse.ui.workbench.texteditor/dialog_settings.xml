@@ -2,14 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="E000000" key="selection"/>
+		<item value="UART" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="E000000"/>
-			<item value="E0000"/>
+			<item value="baud"/>
+			<item value="uart"/>
+			<item value="XUARTPS_BAUDGEN_OFFSET"/>
+			<item value="GPIO"/>
+			<item value="gpio"/>
+			<item value="zybo"/>
+			<item value="zyb"/>
+			<item value="TIMER"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -17,8 +23,8 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="291" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="404" key="DIALOG_HEIGHT"/>
-		<item value="798" key="DIALOG_X_ORIGIN"/>
-		<item value="254" key="DIALOG_Y_ORIGIN"/>
+		<item value="432" key="DIALOG_HEIGHT"/>
+		<item value="1206" key="DIALOG_X_ORIGIN"/>
+		<item value="368" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

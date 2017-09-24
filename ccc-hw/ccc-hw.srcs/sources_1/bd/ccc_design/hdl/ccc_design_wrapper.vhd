@@ -1,8 +1,8 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
---Date        : Wed Sep 13 02:40:52 2017
---Host        : eispl7903 running 64-bit Ubuntu 16.04.3 LTS
+--Date        : Sun Sep 24 01:11:32 2017
+--Host        : yarib running 64-bit Ubuntu 16.04.3 LTS
 --Command     : generate_target ccc_design_wrapper.bd
 --Design      : ccc_design_wrapper
 --Purpose     : IP block netlist
@@ -34,11 +34,15 @@ entity ccc_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    btnsw_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : out STD_LOGIC;
     cs : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    leds_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     miso : in STD_LOGIC;
     mosi : out STD_LOGIC;
-    pmod_tri_io : inout STD_LOGIC_VECTOR ( 23 downto 0 )
+    pmod_tri_io : inout STD_LOGIC_VECTOR ( 23 downto 0 );
+    pwm0 : out STD_LOGIC;
+    pwm1 : out STD_LOGIC
   );
 end ccc_design_wrapper;
 
@@ -69,10 +73,14 @@ architecture STRUCTURE of ccc_design_wrapper is
     pmod_tri_i : in STD_LOGIC_VECTOR ( 23 downto 0 );
     pmod_tri_o : out STD_LOGIC_VECTOR ( 23 downto 0 );
     pmod_tri_t : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    btnsw_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    leds_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     miso : in STD_LOGIC;
     cs : out STD_LOGIC_VECTOR ( 2 downto 0 );
     clk : out STD_LOGIC;
-    mosi : out STD_LOGIC
+    mosi : out STD_LOGIC;
+    pwm0 : out STD_LOGIC;
+    pwm1 : out STD_LOGIC
   );
   end component ccc_design;
   component IOBUF is
@@ -203,8 +211,10 @@ ccc_design_i: component ccc_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      btnsw_tri_i(7 downto 0) => btnsw_tri_i(7 downto 0),
       clk => clk,
       cs(2 downto 0) => cs(2 downto 0),
+      leds_tri_o(3 downto 0) => leds_tri_o(3 downto 0),
       miso => miso,
       mosi => mosi,
       pmod_tri_i(23) => pmod_tri_i_23(23),
@@ -278,7 +288,9 @@ ccc_design_i: component ccc_design
       pmod_tri_t(3) => pmod_tri_t_3(3),
       pmod_tri_t(2) => pmod_tri_t_2(2),
       pmod_tri_t(1) => pmod_tri_t_1(1),
-      pmod_tri_t(0) => pmod_tri_t_0(0)
+      pmod_tri_t(0) => pmod_tri_t_0(0),
+      pwm0 => pwm0,
+      pwm1 => pwm1
     );
 pmod_tri_iobuf_0: component IOBUF
      port map (

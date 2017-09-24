@@ -17,3 +17,72 @@
 23:45:51 INFO  : FPGA configured successfully with bitstream "/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
 23:45:56 INFO  : Processor reset is completed for ps7_cortexa9_0
 21:22:01 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:44:58 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:45:00 INFO  : XSDB server has started successfully.
+15:45:01 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+15:45:01 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+15:45:04 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1505265488000,  Project:1503696178000
+15:45:04 INFO  : The hardware specification for project 'ccc_design_wrapper_hw_platform_0' is different from /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+15:45:04 INFO  : Copied contents of /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf into /ccc_design_wrapper_hw_platform_0/system.hdf.
+15:45:09 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:45:11 INFO  : 
+15:45:12 INFO  : Updating hardware inferred compiler options for FSBL.
+15:45:12 INFO  : Clearing existing target manager status.
+20:58:14 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1505329056000,  Project:1505265488000
+20:58:14 INFO  : Project ccc_design_wrapper_hw_platform_0's source hardware specification located at /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:59:09 INFO  : Copied contents of /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf into /ccc_design_wrapper_hw_platform_0/system.hdf.
+20:59:13 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:59:14 INFO  : 
+20:59:15 INFO  : Updating hardware inferred compiler options for FSBL.
+20:59:15 INFO  : Clearing existing target manager status.
+20:59:15 INFO  : Closing and re-opening the MSS file of ther project FSBL_bsp
+20:59:17 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+20:59:18 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:46:12 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:46:14 INFO  : XSDB server has started successfully.
+17:46:14 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+17:46:14 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+17:46:16 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1505576729000,  Project:1505329056000
+17:46:16 INFO  : The hardware specification for project 'ccc_design_wrapper_hw_platform_0' is different from /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+17:46:17 INFO  : Copied contents of /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf into /ccc_design_wrapper_hw_platform_0/system.hdf.
+17:46:22 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:46:24 INFO  : 
+17:46:24 INFO  : Updating hardware inferred compiler options for FSBL.
+17:46:24 INFO  : Clearing existing target manager status.
+17:46:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+17:46:27 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:52:21 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:52:38 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:52:39 INFO  : XSDB server has started successfully.
+17:52:39 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+17:52:40 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+18:25:02 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1505579065000,  Project:1505576729000
+18:25:02 INFO  : Project ccc_design_wrapper_hw_platform_0's source hardware specification located at /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:25:04 INFO  : Copied contents of /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf into /ccc_design_wrapper_hw_platform_0/system.hdf.
+18:25:09 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:25:11 INFO  : 
+18:25:12 INFO  : Updating hardware inferred compiler options for FSBL.
+18:25:12 INFO  : Clearing existing target manager status.
+18:25:14 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:25:15 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+19:31:48 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:02:23 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:02:24 INFO  : XSDB server has started successfully.
+22:02:25 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+22:02:25 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+01:15:32 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+01:15:33 INFO  : XSDB server has started successfully.
+01:15:34 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+01:15:34 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+01:15:36 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1506208468000,  Project:1505579065000
+01:15:36 INFO  : The hardware specification for project 'ccc_design_wrapper_hw_platform_0' is different from /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+01:15:36 INFO  : Copied contents of /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf into /ccc_design_wrapper_hw_platform_0/system.hdf.
+01:15:47 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:15:49 INFO  : 
+01:15:49 INFO  : Updating hardware inferred compiler options for FSBL.
+01:15:49 INFO  : Clearing existing target manager status.
+01:15:51 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:15:52 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:53:39 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
