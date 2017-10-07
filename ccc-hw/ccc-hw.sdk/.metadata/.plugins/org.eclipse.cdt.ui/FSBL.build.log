@@ -1,4 +1,4 @@
-01:16:00 **** Build of configuration Debug for project FSBL ****
+01:11:50 **** Build of configuration Debug for project FSBL ****
 make all 
 Building file: ../src/fsbl_handoff.S
 Invoking: ARM gcc compiler
@@ -72,5 +72,5 @@ arm-xilinx-eabi-size FSBL.elf  |tee "FSBL.elf.size"
 Finished building: FSBL.elf.size
  
 
-01:16:01 Build Finished (took 824ms)
+01:11:51 Build Finished (took 878ms)
 

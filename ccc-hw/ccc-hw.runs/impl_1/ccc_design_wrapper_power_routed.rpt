@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date             : Sun Sep 24 01:14:14 2017
+| Date             : Sat Oct  7 01:10:08 2017
 | Host             : yarib running 64-bit Ubuntu 16.04.3 LTS
 | Command          : report_power -file ccc_design_wrapper_power_routed.rpt -pb ccc_design_wrapper_power_summary_routed.pb
 | Design           : ccc_design_wrapper
@@ -57,7 +57,7 @@ Table of Contents
 |   LUT as Shift Register |    <0.001 |       68 |      6000 |            1.13 |
 |   F7/F8 Muxes           |    <0.001 |        2 |     17600 |            0.01 |
 |   Others                |     0.000 |      305 |       --- |             --- |
-| Signals                 |     0.005 |     2788 |       --- |             --- |
+| Signals                 |     0.005 |     2790 |       --- |             --- |
 | I/O                     |     0.010 |       44 |       100 |           44.00 |
 | PS7                     |     1.557 |        1 |       --- |             --- |
 | Static Power            |     0.134 |          |           |                 |
@@ -153,8 +153,8 @@ Table of Contents
 |       U0                                         |     0.001 |
 |         ESPI_v1_0_S00_AXI_inst                   |     0.001 |
 |           espi_instance                          |    <0.001 |
-|     axi_timer_0                                  |     0.003 |
-|       U0                                         |     0.003 |
+|     axi_timer_0                                  |     0.004 |
+|       U0                                         |     0.004 |
 |         AXI4_LITE_I                              |    <0.001 |
 |           I_SLAVE_ATTACHMENT                     |    <0.001 |
 |             I_DECODER                            |    <0.001 |
@@ -174,7 +174,7 @@ Table of Contents
 |         TC_CORE_I                                |     0.003 |
 |           COUNTER_0_I                            |     0.001 |
 |             COUNTER_I                            |    <0.001 |
-|           GEN_SECOND_TIMER.COUNTER_1_I           |     0.001 |
+|           GEN_SECOND_TIMER.COUNTER_1_I           |     0.002 |
 |             COUNTER_I                            |     0.001 |
 |           READ_MUX_I                             |     0.000 |
 |           TIMER_CONTROL_I                        |    <0.001 |
@@ -191,10 +191,10 @@ Table of Contents
 |         xlnx_axi_wrshim_unwrap_inst_gp0          |     0.000 |
 |         xlnx_axi_wrshim_unwrap_inst_gp1          |     0.000 |
 |     processing_system7_0_axi_periph              |     0.006 |
-|       s00_couplers                               |     0.004 |
-|         auto_pc                                  |     0.004 |
-|           inst                                   |     0.004 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.004 |
+|       s00_couplers                               |     0.005 |
+|         auto_pc                                  |     0.005 |
+|           inst                                   |     0.005 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.005 |
 |               RD.ar_channel_0                    |    <0.001 |
 |                 ar_cmd_fsm_0                     |    <0.001 |
 |                 cmd_translator_0                 |    <0.001 |

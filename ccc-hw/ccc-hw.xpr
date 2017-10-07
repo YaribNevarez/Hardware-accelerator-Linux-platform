@@ -36,7 +36,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.vhd"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xci"/>
@@ -46,11 +45,12 @@
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_processing_system7_0_axi_periph_0/ccc_design_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hw_handoff/ccc_design.hwh"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hw_handoff/ccc_design_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.hwdef"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ccc_design_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.vhd"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.hwdef"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hw_handoff/ccc_design_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hw_handoff/ccc_design.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/ccc_design/hdl/ccc_design_wrapper.vhd">
         <FileInfo>
