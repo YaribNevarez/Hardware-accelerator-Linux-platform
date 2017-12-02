@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
---Date        : Sat Oct  7 01:07:11 2017
+--Date        : Sat Dec  2 14:59:35 2017
 --Host        : yarib running 64-bit Ubuntu 16.04.3 LTS
 --Command     : generate_target ccc_design_wrapper.bd
 --Design      : ccc_design_wrapper

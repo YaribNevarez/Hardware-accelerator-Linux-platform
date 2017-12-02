@@ -51,33 +51,33 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.cache/wt [current_project]
-  set_property parent.project_path /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.xpr [current_project]
+  set_property webtalk.parent_dir /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.cache/wt [current_project]
+  set_property parent.project_path /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.xpr [current_project]
   set_property ip_repo_paths {
-  /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.cache/ip
-  /home/yarib/ZYBO_projects/Hardware/ip_repo/ESPI_1.0
+  /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.cache/ip
+  /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ip_repo/ESPI_1.0
 } [current_project]
-  set_property ip_output_repo /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.cache/ip [current_project]
-  add_files -quiet /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.runs/synth_1/ccc_design_wrapper.dcp
-  read_xdc -ref ccc_design_processing_system7_0_0 -cells inst /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref ccc_design_rst_processing_system7_0_100M_0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_board.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_board.xdc]
-  read_xdc -ref ccc_design_rst_processing_system7_0_100M_0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xdc]
-  read_xdc -prop_thru_buffers -ref ccc_design_axi_gpio_0_1 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc]
-  read_xdc -ref ccc_design_axi_gpio_0_1 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc]
-  read_xdc -ref ccc_design_axi_timer_0_0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc]
-  read_xdc -ref ccc_design_axi_timer_1_0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc]
-  read_xdc -prop_thru_buffers -ref ccc_design_axi_gpio_0_0 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc]
-  read_xdc -ref ccc_design_axi_gpio_0_0 -cells U0 /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc
-  set_property processing_order EARLY [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc]
-  read_xdc /home/yarib/ZYBO_projects/Hardware/ZYBO-master/Resources/XDC/ZYBO_Master.xdc
+  set_property ip_output_repo /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.cache/ip [current_project]
+  add_files -quiet /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.runs/synth_1/ccc_design_wrapper.dcp
+  read_xdc -ref ccc_design_processing_system7_0_0 -cells inst /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref ccc_design_rst_processing_system7_0_100M_0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_board.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_board.xdc]
+  read_xdc -ref ccc_design_rst_processing_system7_0_100M_0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xdc]
+  read_xdc -prop_thru_buffers -ref ccc_design_axi_gpio_0_1 -cells U0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc]
+  read_xdc -ref ccc_design_axi_gpio_0_1 -cells U0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc]
+  read_xdc -ref ccc_design_axi_timer_0_0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc]
+  read_xdc -ref ccc_design_axi_timer_1_0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc]
+  read_xdc -prop_thru_buffers -ref ccc_design_axi_gpio_0_0 -cells U0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc]
+  read_xdc -ref ccc_design_axi_gpio_0_0 -cells U0 /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc
+  set_property processing_order EARLY [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc]
+  read_xdc /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/constrs_1/imports/XDC/ZYBO_Master.xdc
   link_design -top ccc_design_wrapper -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

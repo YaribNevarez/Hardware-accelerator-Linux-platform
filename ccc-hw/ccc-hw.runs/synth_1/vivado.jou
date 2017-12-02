@@ -2,11 +2,11 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Sat Oct  7 01:07:33 2017
-# Process ID: 29132
-# Current directory: /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.runs/synth_1
+# Start of session at: Sat Dec  2 15:42:24 2017
+# Process ID: 6691
+# Current directory: /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.runs/synth_1
 # Command line: vivado -log ccc_design_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source ccc_design_wrapper.tcl
-# Log file: /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.runs/synth_1/ccc_design_wrapper.vds
-# Journal file: /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.runs/synth_1/vivado.jou
+# Log file: /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.runs/synth_1/ccc_design_wrapper.vds
+# Journal file: /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source ccc_design_wrapper.tcl -notrace

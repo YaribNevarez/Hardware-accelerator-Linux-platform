@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.xpr">
+<Project Version="7" Minor="10" Path="/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7f2e769dffe84a879989a1e64c905a91"/>
@@ -36,7 +36,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_ESPI_0_0/ccc_design_ESPI_0_0.xci"/>
@@ -45,12 +44,13 @@
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_processing_system7_0_axi_periph_0/ccc_design_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ccc_design_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.vhd"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.hwdef"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hw_handoff/ccc_design_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hw_handoff/ccc_design.hwh"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ccc_design_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="hdl/ccc_design.vhd"/>
+        <CompFileExtendedInfo CompFileName="ccc_design.bd" FileRelPathName="ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/ccc_design/hdl/ccc_design_wrapper.vhd">
         <FileInfo>
@@ -67,14 +67,15 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../ZYBO-master/Resources/XDC/ZYBO_Master.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/XDC/ZYBO_Master.xdc">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../ZYBO_legacy/ZYBO-master/Resources/XDC/ZYBO_Master.xdc"/>
+          <Attr Name="ImportTime" Val="1507328223"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PPRDIR/../ZYBO-master/Resources/XDC/ZYBO_Master.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

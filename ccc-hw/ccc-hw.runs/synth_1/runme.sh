@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.runs/synth_1'
+HD_PWD='/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

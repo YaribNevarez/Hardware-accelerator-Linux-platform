@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date             : Sat Oct  7 01:10:08 2017
+| Date             : Sat Dec  2 15:44:45 2017
 | Host             : yarib running 64-bit Ubuntu 16.04.3 LTS
 | Command          : report_power -file ccc_design_wrapper_power_routed.rpt -pb ccc_design_wrapper_power_summary_routed.pb
 | Design           : ccc_design_wrapper

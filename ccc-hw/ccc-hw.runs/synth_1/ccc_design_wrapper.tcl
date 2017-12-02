@@ -9,36 +9,36 @@ create_project -in_memory -part xc7z010clg400-1
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.cache/wt [current_project]
-set_property parent.project_path /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.xpr [current_project]
+set_property webtalk.parent_dir /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.cache/wt [current_project]
+set_property parent.project_path /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths /home/yarib/ZYBO_projects/Hardware/ip_repo/ESPI_1.0 [current_project]
+set_property ip_repo_paths /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ip_repo/ESPI_1.0 [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
-add_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design.bd
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_xbar_0/ccc_design_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design_ooc.xdc]
-set_property is_locked true [get_files /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design.bd]
+add_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design.bd
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_processing_system7_0_0/ccc_design_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_rst_processing_system7_0_100M_0/ccc_design_rst_processing_system7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_xbar_0/ccc_design_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_1/ccc_design_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_0_0/ccc_design_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_timer_1_0/ccc_design_axi_timer_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_axi_gpio_0_0/ccc_design_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ip/ccc_design_auto_pc_0/ccc_design_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design_ooc.xdc]
+set_property is_locked true [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/ccc_design.bd]
 
-read_vhdl -library xil_defaultlib /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/hdl/ccc_design_wrapper.vhd
-read_xdc /home/yarib/ZYBO_projects/Hardware/ZYBO-master/Resources/XDC/ZYBO_Master.xdc
-set_property used_in_implementation false [get_files /home/yarib/ZYBO_projects/Hardware/ZYBO-master/Resources/XDC/ZYBO_Master.xdc]
+read_vhdl -library xil_defaultlib /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/sources_1/bd/ccc_design/hdl/ccc_design_wrapper.vhd
+read_xdc /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/constrs_1/imports/XDC/ZYBO_Master.xdc
+set_property used_in_implementation false [get_files /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.srcs/constrs_1/imports/XDC/ZYBO_Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

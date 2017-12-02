@@ -98,3 +98,11 @@
 01:11:25 INFO  : Updating hardware inferred compiler options for FSBL.
 01:11:25 INFO  : Clearing existing target manager status.
 01:29:14 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+00:54:15 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+00:54:17 INFO  : XSDB server has started successfully.
+00:54:17 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+00:54:17 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+04:16:36 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+04:16:38 INFO  : XSDB server has started successfully.
+04:16:38 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+04:16:39 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
