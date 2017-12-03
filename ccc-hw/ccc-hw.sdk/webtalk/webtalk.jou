@@ -2,11 +2,11 @@
 # Webtalk v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
 # 
-# Start of session at: Sat Aug 26 21:21:59 2017
-# Process ID: 11643
-# Current directory: /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/webtalk
+# Start of session at: Sat Dec  2 16:03:02 2017
+# Process ID: 11556
+# Current directory: /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/webtalk
 # Command line: wbtcv -mode batch -source sdk_webtalk.tcl
-# Log file: /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/webtalk/webtalk.log
-# Journal file: /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/webtalk/webtalk.jou
+# Log file: /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/webtalk/webtalk.log
+# Journal file: /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/webtalk/webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

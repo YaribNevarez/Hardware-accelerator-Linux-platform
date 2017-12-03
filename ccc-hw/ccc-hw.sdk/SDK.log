@@ -106,3 +106,999 @@
 04:16:38 INFO  : XSDB server has started successfully.
 04:16:38 INFO  : Processing command line option -hwspec /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
 04:16:39 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+15:52:14 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:52:15 INFO  : XSDB server has started successfully.
+15:52:16 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+15:56:00 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:56:01 INFO  : XSDB server has started successfully.
+15:56:01 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:00:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:00:10 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:00:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:01:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:01:42 INFO  : 'fpga -state' command is executed.
+16:01:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:43 INFO  : Sourcing of '/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:01:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0' command is executed.
+16:01:43 INFO  : Hardware design information is loaded from '/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/system.hdf'.
+16:01:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0' command is executed.
+16:01:44 INFO  : 'stop' command is executed.
+16:01:44 INFO  : 'ps7_init' command is executed.
+16:01:44 INFO  : 'ps7_post_config' command is executed.
+16:01:44 INFO  : 'con' command is executed.
+16:01:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:45 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:01:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:45 INFO  : The application '/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/standalone_drivers/Debug/standalone_drivers.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:01:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+loadhw /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+dow /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/standalone_drivers/Debug/standalone_drivers.elf
+----------------End of Script----------------
+
+16:01:45 INFO  : Memory regions updated for context APU
+16:01:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:45 INFO  : 'con' command is executed.
+16:01:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+con
+----------------End of Script----------------
+
+16:02:07 INFO  : Disconnected from the channel tcfchan#1.
+16:02:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:02:07 INFO  : 'fpga -state' command is executed.
+16:02:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:02:08 INFO  : Sourcing of '/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:02:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0' command is executed.
+16:02:08 INFO  : Hardware design information is loaded from '/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/system.hdf'.
+16:02:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0' command is executed.
+16:02:08 INFO  : 'stop' command is executed.
+16:02:09 INFO  : 'ps7_init' command is executed.
+16:02:09 INFO  : 'ps7_post_config' command is executed.
+16:02:09 INFO  : 'con' command is executed.
+16:02:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:02:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:10 INFO  : The application '/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/standalone_drivers/Debug/standalone_drivers.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:02:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+loadhw /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+dow /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/standalone_drivers/Debug/standalone_drivers.elf
+----------------End of Script----------------
+
+16:02:10 INFO  : Memory regions updated for context APU
+16:02:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:10 INFO  : 'con' command is executed.
+16:02:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279778466A"} -index 0
+con
+----------------End of Script----------------
+
+16:02:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:02:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:02:33 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:03:02 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:06:47 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:06:48 INFO  : XSDB server has started successfully.
+16:06:48 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:06:49 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:08:21 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:08:23 INFO  : XSDB server has started successfully.
+16:08:23 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:08:23 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:08:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:08:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:08:40 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:10:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:10:18 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:10:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:11:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:11:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:13:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:14:23 INFO  : Refreshed build settings on project standalone_drivers
+16:14:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:17:23 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:17:24 INFO  : XSDB server has started successfully.
+16:17:25 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:17:25 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:18:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:18:34 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:18:35 INFO  : XSDB server has started successfully.
+16:18:35 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:18:36 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:20:00 INFO  : No changes in MSS file content so not generating sources.
+16:20:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:20:39 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:20:51 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:20:52 INFO  : XSDB server has started successfully.
+16:20:52 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:20:53 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:21:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:22:14 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:22:15 INFO  : XSDB server has started successfully.
+16:22:15 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:22:16 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:22:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:22:50 ERROR : Unexpected error while opening JTAG UART: 
+java.lang.RuntimeException: Error while opening JTAG UART server: MDM Uart NOT Present in the System
+Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.startJTAGUARTServer(TM.java:951)
+	at com.xilinx.sdk.debug.core.internal.comm.JTAGUARTStreamsProxy.<init>(JTAGUARTStreamsProxy.java:32)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.createStreamsProxy(RemoteProcess.java:164)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.<init>(RemoteProcess.java:65)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:778)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:23:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:23:06 ERROR : Unexpected error while opening JTAG UART: 
+java.lang.RuntimeException: Error while opening JTAG UART server: MDM Uart NOT Present in the System
+Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.startJTAGUARTServer(TM.java:951)
+	at com.xilinx.sdk.debug.core.internal.comm.JTAGUARTStreamsProxy.<init>(JTAGUARTStreamsProxy.java:32)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.createStreamsProxy(RemoteProcess.java:164)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.<init>(RemoteProcess.java:65)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:778)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:23:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:23:59 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:24:01 INFO  : XSDB server has started successfully.
+16:24:01 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:24:01 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:24:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:24:46 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:24:59 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:25:01 INFO  : XSDB server has started successfully.
+16:25:01 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:25:01 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:25:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:26:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:38:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:42:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:45:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:45:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:46:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:46:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:46:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:46:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:46:45 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:46:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:46:51 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:46:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:47:00 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:47:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:47:08 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:686)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:47:12 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:47:27 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:47:28 INFO  : XSDB server has started successfully.
+16:47:28 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:47:29 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:47:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:47:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:47:39 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:47:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:47:50 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:48:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:48:19 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:50:47 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:50:48 INFO  : XSDB server has started successfully.
+16:50:49 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:50:49 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+16:51:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:51:18 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:51:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:51:30 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:52:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:52:22 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:52:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:52:42 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:52:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:52:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:52:52 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:52:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:52:56 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:53:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:53:51 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:53:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:56:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:56:54 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:57:09 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:57:40 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:57:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+16:57:50 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+16:57:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:57:54 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:57:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:58:00 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:58:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:58:25 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:58:29 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:58:47 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:58:48 INFO  : XSDB server has started successfully.
+16:58:49 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+16:58:49 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+17:01:10 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:01:11 INFO  : XSDB server has started successfully.
+17:01:12 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+17:01:12 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+17:01:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:01:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:01:21 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+17:01:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:01:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:01:54 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+17:02:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:02:54 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:04:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:04:13 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:686)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:04:42 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:04:54 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:04:55 INFO  : XSDB server has started successfully.
+17:04:55 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+17:04:56 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+17:05:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:05:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:06:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:06:43 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:06:51 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:07:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:07:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:07:06 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+17:07:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:07:15 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:07:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:08:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:10:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:13:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:14:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:14:33 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+17:14:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:38 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:14:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:45 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:14:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:15:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:15:05 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:15:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:17:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:21:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:22:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:23:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:33:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:34:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:34:24 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:34:31 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:34:55 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:35:02 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:35:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:35:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:35:07 ERROR : Error occured during Prog B register check
+17:35:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:35:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:35:17 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+17:35:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:35:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:35:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:35:36 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:36:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:38:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:39:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:39:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:39:44 ERROR : Error occured during Prog B register check
+17:39:48 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+17:39:48 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+17:39:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:39:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+17:39:55 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+17:40:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:40:06 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:40:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:40:15 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:40:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:40:44 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:41:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:41:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:41:13 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:41:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:41:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:41:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:16:35 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:16:38 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:17:00 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:17:01 INFO  : XSDB server has started successfully.
+18:17:01 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+18:17:02 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+18:17:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:17:13 ERROR : Cannot find memory context of target ARM_DAP
+18:17:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:17:24 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:17:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:17:37 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:17:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:17:48 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:17:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:17:54 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:18:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:18:07 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:18:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:18:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:18:24 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:18:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:18:30 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:18:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:18:36 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:18:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:18:42 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:18:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:18:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:18:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:18:59 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:19:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:26:55 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1512235596000,  Project:1512225898000
+18:26:55 INFO  : Project ccc_design_wrapper_hw_platform_0's source hardware specification located at /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:26:59 INFO  : Copied contents of /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf into /ccc_design_wrapper_hw_platform_0/system.hdf.
+18:27:03 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:27:04 INFO  : 
+18:27:05 INFO  : 
+18:27:06 INFO  : Updating hardware inferred compiler options for FSBL.
+18:27:07 INFO  : Updating hardware inferred compiler options for standalone_drivers.
+18:27:07 INFO  : Clearing existing target manager status.
+18:27:07 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:27:08 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+18:27:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:27:39 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:27:42 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:27:55 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:27:56 INFO  : XSDB server has started successfully.
+18:27:56 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+18:27:57 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+18:28:36 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:29:02 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:29:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:29:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:29:11 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:29:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:29:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:29:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:29:25 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:29:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:32:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:32:14 ERROR : Error occured during Prog B register check
+18:32:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:32:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+18:32:23 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+18:32:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:32 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:32:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:45 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:32:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:28:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:28:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+19:28:33 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+19:28:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:28:39 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:28:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:29:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:29:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:29:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+19:29:58 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+19:30:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:30:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:30:40 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+01:30:40 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+21:50:30 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:00:17 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:00:18 INFO  : XSDB server has started successfully.
+22:00:19 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+22:00:19 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+22:28:33 WARN  : Unable to obtain port 2350 for use by XMD, java.net.BindException: Address already in use
+22:28:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:30:54 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:31:07 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:31:08 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:31:09 INFO  : XSDB server has started successfully.
+22:31:09 INFO  : Processing command line option -hwspec /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper.hdf.
+22:31:10 INFO  : XSDB server has started successfully.
+22:31:15 INFO  : Checking for hwspec changes in the project ccc_design_wrapper_hw_platform_0.
+22:32:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:32:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+22:32:22 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+22:32:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:50:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:50:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+22:50:42 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+22:50:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:53:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:12:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:12:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778466A" && level==0} -index 1' command is executed.
+23:12:07 INFO  : FPGA configured successfully with bitstream "/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ccc_design_wrapper.bit"
+23:12:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:12:42 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:12:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:18:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:20:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:21:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:39:18 INFO  : Processor reset is completed for ps7_cortexa9_0

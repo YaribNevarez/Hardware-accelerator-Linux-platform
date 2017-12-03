@@ -1,0 +1,15 @@
+/*
+ * MAX1163.h
+ *
+ *  Created on: Dec 3, 2017
+ *      Author: root
+ */
+
+#ifndef MAX1163_H_
+#define MAX1163_H_
+
+adc_initialize(void);
+
+u32 adc_read(u8 channel);
+
+#endif /* MAX1163_H_ */

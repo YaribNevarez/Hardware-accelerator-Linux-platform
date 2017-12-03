@@ -15,7 +15,7 @@ src/pcap.o src/pcap.d: ../src/pcap.c ../src/pcap.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xil_printf.h ../src/fsbl_debug.h \
- /home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.h \
+ /home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.h \
  ../src/image_mover.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xil_exception.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/sleep.h
@@ -60,7 +60,7 @@ src/pcap.o src/pcap.d: ../src/pcap.c ../src/pcap.h \
 
 ../src/fsbl_debug.h:
 
-/home/yarib/ZYBO_projects/Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.h:
+/home/yarib/SOFTWARE_PROJECT/SoC_Hardware/ccc-hw/ccc-hw.sdk/ccc_design_wrapper_hw_platform_0/ps7_init.h:
 
 ../src/image_mover.h:
 

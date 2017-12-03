@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;standalone_drivers/src/ADC/MAX11632.C&apos;" deleteContents="false" description="Delete resource &apos;standalone_drivers/src/ADC/MAX11632.C&apos;" element1="/standalone_drivers/src/ADC/MAX11632.C" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1512338574619"/>
+</session>

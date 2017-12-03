@@ -15,8 +15,19 @@
 
 #include "xparameters_ps.h"
 
-#define STDIN_BASEADDRESS 0xE0001000
-#define STDOUT_BASEADDRESS 0xE0001000
+#define STDIN_BASEADDRESS 0xE0000000
+#define STDOUT_BASEADDRESS 0xE0000000
+
+/******************************************************************/
+
+/* Definitions for driver ESPI */
+#define XPAR_ESPI_NUM_INSTANCES 1
+
+/* Definitions for peripheral ESPI_0 */
+#define XPAR_ESPI_0_DEVICE_ID 0
+#define XPAR_ESPI_0_S00_AXI_BASEADDR 0xFFFFFFFF
+#define XPAR_ESPI_0_S00_AXI_HIGHADDR 0x00000000
+
 
 /******************************************************************/
 
@@ -201,11 +212,6 @@
 /* Definitions for peripheral PS7_SLCR_0 */
 #define XPAR_PS7_SLCR_0_S_AXI_BASEADDR 0xF8000000
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
-
-
-/* Definitions for peripheral ESPI_0 */
-#define XPAR_ESPI_0_0 0x43C00000
-#define XPAR_ESPI_0_0 0x43C00000
 
 
 /******************************************************************/
